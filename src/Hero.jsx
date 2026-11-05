@@ -86,7 +86,7 @@ function Hero() {
             </div>
 
             <img
-              src="/Affan-Shaikh5.png"
+              src={`${import.meta.env.BASE_URL}/Affan-Shaikh5.png`}
               alt="Portrait of Affan Shaikh"
             />
 
