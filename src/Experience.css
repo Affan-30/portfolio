@@ -1,0 +1,50 @@
+.timeline { position: relative; padding-left: 44px; }
+.timeline-line {
+  position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px;
+  background: linear-gradient(var(--accent), rgba(255, 255, 255, 0.12));
+  transform: scaleY(0); transform-origin: top; transition: transform 1.4s ease 0.2s;
+}
+.section.is-visible .timeline-line { transform: scaleY(1); }
+
+.tl-item {
+  position: relative; margin-bottom: 28px; padding: 32px 34px;
+  border: 1px solid var(--line); border-radius: 16px; background: rgba(255, 255, 255, 0.015);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.tl-item:last-child { margin-bottom: 0; }
+.tl-item:hover { border-color: rgba(133, 245, 238, 0.35); transform: translateX(4px); }
+.tl-item > * { position: relative; z-index: 1; }
+
+.tl-node {
+  position: absolute !important; left: -44px; top: 38px; width: 15px; height: 15px;
+  border-radius: 50%; background: #000; border: 2px solid var(--accent);
+  box-shadow: 0 0 0 5px rgba(133, 245, 238, 0.1), 0 0 16px rgba(133, 245, 238, 0.5);
+}
+.tl-meta { display: flex; align-items: center; gap: 14px; font: 400 12px var(--mono); color: var(--dim); }
+.tl-now { color: var(--accent); animation: now-pulse 2s ease-in-out infinite; }
+@keyframes now-pulse { 50% { opacity: 0.45; } }
+
+.tl-item h3 { margin-top: 12px; font: 600 clamp(22px, 2.6vw, 28px) "Space Grotesk", sans-serif; letter-spacing: -0.8px; }
+.tl-item h3 span { color: var(--muted); font-weight: 400; }
+.tl-item ul { margin-top: 18px; padding-left: 18px; max-width: 700px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.tl-item li + li { margin-top: 6px; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.tl-tags span {
+  padding: 5px 11px; border: 1px solid var(--line); border-radius: 100px;
+  font: 400 11.5px var(--mono); color: #b5b5b5;
+}
+
+@media (max-width: 700px) {
+  .timeline { padding-left: 28px; }
+  .tl-item { padding: 24px 20px; }
+  .tl-node { left: -28px; top: 30px; }
+  .timeline-line { left: 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline-line { transform: scaleY(1); transition: none; }
+  .tl-now { animation: none; }
+}
+
+/* let the timeline node sit outside the card */
+.tl-item.spot { overflow: visible; }
+.tl-item.spot::before { border-radius: 16px; }

@@ -1,0 +1,42 @@
+.console {
+  display: grid; grid-template-columns: 220px minmax(0, 1fr);
+  border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  background: rgba(255, 255, 255, 0.015);
+}
+.console-nav { display: flex; flex-direction: column; padding: 14px; gap: 4px; border-right: 1px solid var(--line); }
+.console-nav button {
+  text-align: left; padding: 11px 14px; border: 0; border-radius: 8px; cursor: pointer;
+  background: transparent; color: var(--muted); font: 400 13px var(--mono);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.console-nav button b { color: var(--accent); font-weight: 500; margin-right: 6px; font-size: 11px; }
+.console-nav button:hover { color: var(--fg); background: rgba(255, 255, 255, 0.04); }
+.console-nav button.on { color: var(--fg); background: rgba(133, 245, 238, 0.08); box-shadow: inset 2px 0 var(--accent); }
+
+.console-bar {
+  display: flex; align-items: center; gap: 16px; padding: 14px 20px;
+  border-bottom: 1px solid var(--line); font: 400 12px var(--mono);
+}
+.dots { display: flex; gap: 6px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.16); }
+.console-bar code { color: var(--fg); }
+.console-status { margin-left: auto; color: var(--accent); white-space: nowrap; }
+.console-status.wait { color: var(--dim); }
+
+.console-panel pre {
+  min-height: 360px; max-height: 460px; overflow: auto; padding: 22px 24px;
+  font: 400 13.5px / 1.75 var(--mono); color: #cfcfcf; white-space: pre-wrap; overflow-wrap: anywhere; transition: opacity 0.25s ease;
+}
+.console-panel pre.fade { opacity: 0.25; }
+.j-key { color: var(--accent); }
+.j-str { color: #e8e8e8; }
+.j-num { color: var(--violet); }
+
+@media (max-width: 800px) {
+  .console { grid-template-columns: 1fr; }
+  .console-nav { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .console-nav button { white-space: nowrap; }
+  .console-bar { flex-wrap: wrap; gap: 8px 16px; }
+  .console-status { margin-left: 0; }
+  .console-panel pre { min-height: 300px; font-size: 12.5px; }
+}

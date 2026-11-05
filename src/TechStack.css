@@ -1,0 +1,13 @@
+ .tech-stack { overflow:hidden; padding:24px 0 35px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.tech-stack-label { margin:0 0 23px; text-align:left; color:var(--dim); font:9px "DM Mono",monospace; letter-spacing:1.5px; }
+.tech-carousel { position:relative; width:100%; overflow:hidden; }
+.tech-track { display:flex; align-items:center; gap:64px; width:max-content; animation:techScroll 32s linear infinite; }
+.tech-logo { width:29px; height:29px; flex-shrink:0; filter:grayscale(1); opacity:.58; transition:filter .2s,opacity .2s,transform .2s; }
+.tech-logo:hover { filter:none; opacity:1; transform:translateY(-3px); }
+.tech-carousel:hover .tech-track { animation-play-state:paused; }
+.tech-carousel::before,.tech-carousel::after { content:""; position:absolute; z-index:2; top:0; bottom:0; width:70px; pointer-events:none; }
+.tech-carousel::before { left:0; background:linear-gradient(90deg,var(--bg),transparent); }
+.tech-carousel::after { right:0; background:linear-gradient(270deg,var(--bg),transparent); }
+@keyframes techScroll { from { transform:translateX(0); } to { transform:translateX(calc(-50% - 32px)); } }
+@media(max-width:700px) { .tech-track { gap:42px; animation-duration:25s; } .tech-logo { width:25px; height:25px; } }
+@media(prefers-reduced-motion:reduce) { .tech-track { animation:none; } }

@@ -1,0 +1,103 @@
+.hero-kicker, .hero-overline, .hero-specialty span, .hero-socials, .hero-bottomline, .portrait-topline, .visual-note { font: 10px "DM Mono", monospace; letter-spacing: 1.2px; }
+.hero-kicker { display:flex; align-items:center; gap:12px; color:var(--muted); padding-bottom:24px; border-bottom:1px solid var(--line); }
+.kicker-line { width:28px; height:1px; background:var(--accent); }
+.kicker-index { margin-left:auto; color:var(--dim); }
+.hero-overline { color:var(--accent); margin-bottom:22px; }
+.hero h1 { font:800 clamp(62px, 8.2vw, 112px)/.98 "Manrope",sans-serif; letter-spacing:-.085em; }
+.hero h1 em, .projects-header h2 em { color:var(--accent); font-style:normal; }
+.hero-description { max-width:560px; margin-top:30px; color:var(--muted); font-size:clamp(16px,1.6vw,20px); line-height:1.7; }
+.hero-specialty { display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top:28px; padding-top:17px; border-top:1px solid var(--line); }
+.hero-specialty span { color:var(--dim); }
+.hero-specialty strong { font:600 13px "DM Sans",sans-serif; }
+.hero-specialty i { color:var(--warm); font-style:normal; padding:0 4px; }
+.hero-actions { display:flex; gap:12px; margin-top:34px; }
+.hero-actions a { display:inline-flex; align-items:center; gap:28px; padding:15px 18px; font-size:12px; font-weight:700; transition:transform .2s,background .2s; }
+.hero-actions a:hover { transform:translateY(-3px); }
+.hero-primary { background:var(--accent); color:white; }
+.hero-primary:hover { background:#2547ae; }
+.hero-secondary { border:1px solid var(--line); }
+.hero-socials { display:flex; flex-wrap:wrap; gap:24px; margin-top:45px; color:var(--muted); font-size:9px; }
+.hero-socials a:hover { color:var(--accent); }
+.hero-socials span { display:flex; align-items:center; gap:8px; color:var(--dim); }
+.hero-socials b { width:6px; height:6px; border-radius:50%; background:#4d9a6c; }
+.portrait-topline, .portrait-caption { display:flex; justify-content:space-between; color:#626875; font-size:8px; padding:2px 1px 12px; }
+.portrait-caption { padding:12px 1px 1px; font:600 10px "DM Sans",sans-serif; }
+.hero-stamp { position:absolute; left:-38px; bottom:50px; width:92px; height:92px; display:flex; flex-direction:column; justify-content:center; align-items:center; background:rgb(148, 215, 215); color:rgb(0, 0, 0); border-radius:50%; transform:rotate(-10deg); box-shadow:0 8px 25px rgba(230,111,75,.2); }
+.hero-stamp span { font:800 27px "Manrope",sans-serif; letter-spacing:-2px; }
+.hero-stamp small { font:8px "DM Mono",monospace; text-align:center; line-height:1.3; }
+.visual-note { position:absolute; right:-8px; top:38px; color:black; writing-mode:vertical-rl; line-height:1.7; background-color:rgb(148, 215, 215); padding: 5px;}
+.hero-bottomline { display:flex; justify-content:space-between; padding:20px 0; border-top:1px solid var(--line); color:var(--dim); font-size:9px; }
+.hero-bottomline span:last-child { color:var(--accent); font-size:15px; }
+/* Hero layout */
+.hero {
+  width: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 7%;
+  align-items: center;
+  padding: 62px 4% 55px 0;
+}
+
+.hero-content {
+  min-width: 0;
+  max-width: 720px;
+}
+
+/* Portrait visual */
+.hero-visual {
+  position: relative;
+  width: min(100%, 370px);
+  justify-self: end;
+  padding: 0 22px 24px 0;
+}
+
+.portrait-frame {
+  position: relative;
+  background: #e4e0d6;
+  padding: 13px;
+  box-shadow: 18px 18px 0 var(--accent-soft);
+  transform: rotate(1.5deg);
+}
+
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(.78);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, .72fr);
+    gap: 30px;
+  }
+
+  .portrait-frame img {
+    height: 340px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 45px 0 38px;
+    gap: 50px;
+  }
+
+  .hero-visual {
+    width: min(78%, 330px);
+    justify-self: center;
+    margin-left: 20px;
+  }
+
+  .portrait-frame img {
+    height: 360px;
+  }
+}

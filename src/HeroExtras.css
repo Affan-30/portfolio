@@ -1,0 +1,35 @@
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 26px; padding: 7px 14px;
+  border: 1px solid var(--line); border-radius: 100px;
+  font: 500 12px var(--mono); letter-spacing: 0.3px; color: var(--muted);
+}
+.hero-eyebrow i {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 10px var(--accent);
+}
+
+.hero-typed {
+  margin-top: 26px; min-height: 24px;
+  font: 400 15px var(--mono); color: var(--muted);
+}
+.hero-typed .prompt { color: var(--accent); margin-right: 10px; }
+.hero-typed .typed { color: var(--fg); }
+.caret {
+  display: inline-block; width: 8px; height: 1.1em; margin-left: 3px;
+  background: var(--accent); vertical-align: -2px;
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }
+
+.hero-actions { flex-wrap: wrap; }
+.hero-actions .hero-primary {
+  background: var(--accent); color: #001312; font-weight: 600;
+}
+.hero-actions .hero-primary:hover {
+  background: #a6faf4;
+  box-shadow: 0 0 0 4px rgba(133, 245, 238, 0.14), 0 14px 40px -12px rgba(133, 245, 238, 0.55);
+}
+.hero-actions .hero-secondary:hover { background: rgba(255, 255, 255, 0.05); }
+
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
