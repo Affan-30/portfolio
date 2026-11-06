@@ -20,6 +20,7 @@ const certifications = [
   ["Programming with Generative AI · NPTEL, IISc Bangalore", "Aug – Oct 2025"],
   ["Soft Skill Development · NPTEL, IIT Kharagpur", "Jan – Mar 2025"],
   ["3rd Prize, Urdu Article Writing · Solapur University", "Mar 2026"],
+  ["Research Methodology · NPTEL, IIT Madras", "Jul – Oct 2025"],
 ];
 
 function Education() {

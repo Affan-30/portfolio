@@ -1,10 +1,12 @@
 import Section from "./Section";
 import CountUp from "./CountUp";
 import "./About.css";
+import { projects } from "./data";
 
+const no = projects.length
 const stats = [
   { value: 9.22, decimals: 2, label: "CGPA", note: "B.Tech CSE" },
-  { value: 5, label: "Projects built", note: "Java, Node & AI" },
+  { value: no, label: "Projects built", note: "Java, Node & AI" },
   { value: 2, label: "Roles", note: "Annotator & intern" },
   { value: 4, label: "Certificates & awards", note: "NPTEL, Java, Urdu writing" },
 ];

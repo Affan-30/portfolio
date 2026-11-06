@@ -7,6 +7,8 @@ import About from "./About.jsx";
 // import Skills from "./Skills.jsx";
 import Education from "./Education.jsx";
 import Contact from "./Contact.jsx";
+import Marquee from "./Marquee.jsx";
+import ApiConsole from "./ApiConsole.jsx";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <a href="#projects">Work</a>
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
           <a href="#contact" className="nav-contact">Let’s talk <span>↗</span></a>
         </div>
       </nav>
@@ -25,9 +29,12 @@ function App() {
       <div id="top" />
       <Hero />
       <TechStack />
+      
       <Projects />
+      <Marquee/>
       <Experience />
       <About />
+      <ApiConsole/>
       {/* <Skills /> */}
       <Education />
       <Contact />

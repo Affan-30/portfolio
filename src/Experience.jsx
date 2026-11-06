@@ -15,7 +15,7 @@ const experience = [
   },
   {
     period: "Nov 2025 – Jan 2026",
-    role: "Virtual Intern",
+    role: "Java FullStack Developer Intern",
     org: "Infosys Springboard",
     points: [
       "Built CivicPulse Hub, a grievance redressal and feedback platform for reporting and tracking civic issues.",

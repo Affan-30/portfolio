@@ -5,6 +5,8 @@ const items = [
   ["projects", "Projects"],
   ["experience", "Experience"],
   ["about", "About"],
+  ["skills", "Skills"],
+  ["education", "Education"],
   ["contact", "Contact"],
 ];
 
