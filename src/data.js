@@ -3,7 +3,7 @@ export const EMAIL = "affansshaikh76@gmail.com";
 export const LINKS = {
   github: "https://github.com/Affan-30",
   linkedin: "https://linkedin.com/in/affan3006",
-  resume: "/Affan-Shaikh-Resume.pdf",
+  resume: `${import.meta.env.BASE_URL}Affan-Shaikh-Resume.pdf`,
 };
 
 export const projects = [
@@ -67,6 +67,18 @@ export const projects = [
     year: "Nov 2025",
     image:  `${import.meta.env.BASE_URL}projects/civicpulse.png`,
     github: "https://github.com/Affan-30/CivicPulse-Hub",
+    live: "#",
+  },
+   {
+    number: "06",
+    title: "Research Assistant — AI Chrome Extension",
+    description:
+      "Chrome extension integrating the Gemini API to summarize and simplify selected text for faster research and note-taking, with a smart side-panel UI and local-storage-based note management.",
+    technologies: [ "Chrome Extension",  "Spring Boot" , "Gemini API"],
+    type: "Chrome Extension",
+    year: "Feb 2026",
+    image:  `${import.meta.env.BASE_URL}projects/ra.png`,
+    github: "https://github.com/Affan-30/Research-Assistant",
     live: "#",
   },
 ];
